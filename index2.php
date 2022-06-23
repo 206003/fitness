@@ -25,12 +25,19 @@
 			<h2>今月のお知らせ</h2>
 
 			<?php
+			if(isset($_POST["info"])){
+				$info = htmlspecialchars($_POST["info"]);
+			}
 				$con = pg_connect("host = localhost dbname = postgres user = postgres password = system");
 
 				if($con == false){
    					echo '<div style="text-aline: center;">／／／ サービスのメンテナンス中です ／／／</div>';
    					exit();
 				}
+			if($info != null){
+				
+			}
+
 			?>
 
 		</div>
@@ -47,7 +54,7 @@
 <div id="footer">
 
 	<?php
-	$date = date('y');
+	$date = date('Y');
 	echo '<p>Copyright '.$date.' HAPPINESS FITNESS CLUB All rights reserved.</p>';
 	?>
 
