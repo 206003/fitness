@@ -1,0 +1,45 @@
+﻿@charset "utf-8";
+
+/* 基本レイアウト ここから↓ */
+@import url(common.css);
+#header {
+	width: 800px;
+	height: 70px;
+	margin: 20px auto 40px auto;
+	position: relative;
+}
+#header h1 {
+	margin : 0;
+	position: absolute;
+}
+#nav {
+	position: absolute;
+	right: 0;
+}
+#nav ul {
+	list-style-type: none;
+	overflow: hidden;
+}
+#nav ul li {
+	float: left;
+}
+#footer p {
+	margin-bottom: 0;
+	padding: 14px 0 14px 0;
+	background-image: url(../images/bg_footer.png);
+	background-repeat: repeat-x;
+	text-align: center;
+}
+/* 基本レイアウト ここまで↑ */
+
+/* 「施設のご案内」ページ ここから↓ */
+
+/* 「施設のご案内」ページ ここまで↑ */
+
+/* 「料金プラン」ページ ここから↓ */
+
+/* 「料金プラン」ページ ここまで↑ */
+
+/* 「ご意見・ご要望」ページ ここから↓ */
+
+/* 「ご意見・ご要望」ページ ここまで↑ */
