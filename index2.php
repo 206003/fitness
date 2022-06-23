@@ -23,9 +23,16 @@
 		<p id="graphic"><img src="images/graphic.jpg" width="570" height="300" alt="ハピネスフィットネスクラブでは さまざまなプログラムをご用意しております。"></p>
 		<div id="section">
 			<h2>今月のお知らせ</h2>
-			<p>■2018年4月12日<br>入会された方に、ミネラルウォーターをプレゼントいたします。運動中の水分補給にお使いください。</p>
-			<p>■2018年4月8日<br>友達紹介キャンペーン実施中！友達を誘っていただけると今治タオルをもれなくプレゼント。</p>
-			<p>■2018年4月1日<br>今月の教室のスケジュールが決定しました。スケジュールページからご確認ください。</p>
+
+			<?php
+				$con = pg_connect("host = localhost dbname = postgres user = postgres password = system");
+
+				if($con == false){
+   					echo '<div style="text-aline: center;">／／／ サービスのメンテナンス中です ／／／</div>';
+   					exit();
+				}
+			?>
+
 		</div>
 	</div>
 	<div id="sub">
@@ -38,7 +45,12 @@
 	</div>
 </div>
 <div id="footer">
-	<p>Copyright 2018 HAPPINESS FITNESS CLUB All rights reserved.</p>
+
+	<?php
+	$date = date('y');
+	echo '<p>Copyright '.$date.' HAPPINESS FITNESS CLUB All rights reserved.</p>';
+	?>
+
 </div>
 </body>
 </html>
